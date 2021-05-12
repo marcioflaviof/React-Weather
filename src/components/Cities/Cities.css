@@ -3,7 +3,15 @@ div .cities {
   margin-right: 7rem;
 }
 
-div .cities .cities-subtitles {
+div .cities-subtitles-one {
+  display: flex;
+}
+
+div .cities-subtitles-one p {
+  padding-left: 1rem;
+}
+
+div .cities-subtitles {
   display: flex;
 }
 
@@ -23,11 +31,20 @@ div .cities-citie-holder p {
   padding-left: 1.25rem;
   font-weight: bold;
 }
-
 div .cities-block-holder {
   display: flex;
 }
 
 div .citie-block-one {
   flex: 1;
+}
+
+@media (max-width: 600px) {
+  div .cities-block-holder {
+    display: inline;
+  }
+
+  div .cities-subtitles {
+    display: none;
+  }
 }

@@ -17,7 +17,7 @@ function Cities() {
 
       <div className="cities-block-holder">
         <div className="citie-block-one">
-          <div className="cities-subtitles">
+          <div className="cities-subtitles-one">
             <p>Min</p>
             <p>Máx</p>
           </div>

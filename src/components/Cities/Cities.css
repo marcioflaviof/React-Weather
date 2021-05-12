@@ -40,6 +40,11 @@ div .citie-block-one {
 }
 
 @media (max-width: 600px) {
+  div .cities {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
   div .cities-block-holder {
     display: inline;
   }

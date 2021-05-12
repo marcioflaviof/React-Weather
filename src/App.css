@@ -1,0 +1,10 @@
+div .centralize {
+  margin: auto;
+  margin-top: 5rem;
+  max-width: 700px;
+}
+
+div .centralize .centralize-text {
+  text-align: center;
+  padding: 3rem;
+}

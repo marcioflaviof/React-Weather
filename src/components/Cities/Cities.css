@@ -1,0 +1,33 @@
+div .cities {
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
+div .cities .cities-subtitles {
+  display: flex;
+}
+
+div .cities-subtitles p {
+  padding-left: 1rem;
+}
+
+div .cities-citie-holder {
+  display: flex;
+}
+
+div .cities-temp-holder {
+  display: flex;
+}
+
+div .cities-citie-holder p {
+  padding-left: 1.25rem;
+  font-weight: bold;
+}
+
+div .cities-block-holder {
+  display: flex;
+}
+
+div .citie-block-one {
+  flex: 1;
+}

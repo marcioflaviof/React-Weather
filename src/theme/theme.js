@@ -1,5 +1,5 @@
-export default {
-  fontSizes: [8, 12, 16, 18, 24],
+const themes = {
+  fontSizes: [12, 16, 24, 28, 36, 48, 64],
   colors: {
     background: "#f98e01",
   },
@@ -9,3 +9,5 @@ export default {
     },
   },
 };
+
+export default themes;

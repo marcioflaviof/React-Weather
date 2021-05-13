@@ -1,6 +1,22 @@
 import { Box, Flex, Text } from "@theme-ui/components";
 
 function Cities() {
+  const cities = [
+    "Rio de Janeiro",
+    "São Paulo",
+    "Belo Horizonte",
+    "Brasília",
+    "Belém",
+  ];
+
+  const citiesTwo = [
+    "Salvador",
+    "Curitiba",
+    "Fortaleza",
+    "Manaus",
+    "João Pessoa",
+  ];
+
   return (
     <Box
       sx={{
@@ -42,76 +58,29 @@ function Cities() {
               <p>Min</p>
               <p>Máx</p>
             </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
-              }}
-            >
-              <Flex>
-                <p>18º</p>
-                <p>27º</p>
-              </Flex>
-              <Flex>
-                <p>Rio de Janeiro</p>
-              </Flex>
-            </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
-              }}
-            >
-              <Flex>
-                <p>14º</p>
-                <p>22º</p>
-              </Flex>
-              <Box>
-                <p>São Paulo</p>
-              </Box>
-            </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
-              }}
-            >
-              <Flex>
-                <p>21º</p>
-                <p>32º</p>
-              </Flex>
-              <Box>
-                <p>Belo Horizonte</p>
-              </Box>
-            </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
-              }}
-            >
-              <Flex>
-                <p>24º</p>
-                <p>37º</p>
-              </Flex>
-              <Box>
-                <p>Brasília</p>
-              </Box>
-            </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
-              }}
-            >
-              <Flex>
-                <p>24º</p>
-                <p>37º</p>
-              </Flex>
-              <Box>
-                <p>Belém</p>
-              </Box>
-            </Flex>
+
+            {cities.map((citie) => {
+              return (
+                <Flex
+                  sx={{
+                    paddingLeft: "0.7rem",
+                    p: {
+                      paddingLeft: "0.5rem",
+                      fontWeight: "bold",
+                      fontSize: 1,
+                    },
+                  }}
+                >
+                  <Flex>
+                    <p>{(Math.random() * (20 - 3) + 3).toFixed()}º</p>
+                    <p>{(Math.random() * (40 - 20) + 20).toFixed()}º</p>
+                  </Flex>
+                  <Flex>
+                    <p>{citie}</p>
+                  </Flex>
+                </Flex>
+              );
+            })}
           </Box>
           <Box>
             <Flex
@@ -128,76 +97,28 @@ function Cities() {
               <p>Min</p>
               <p>Máx</p>
             </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
-              }}
-            >
-              <Flex>
-                <p>18º</p>
-                <p>27º</p>
-              </Flex>
-              <Box>
-                <p>Rio de Janeiro</p>
-              </Box>
-            </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
-              }}
-            >
-              <Flex>
-                <p>14º</p>
-                <p>22º</p>
-              </Flex>
-              <Box>
-                <p>São Paulo</p>
-              </Box>
-            </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
-              }}
-            >
-              <Flex>
-                <p>21º</p>
-                <p>32º</p>
-              </Flex>
-              <Box>
-                <p>Belo Horizonte</p>
-              </Box>
-            </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
-              }}
-            >
-              <Flex>
-                <p>24º</p>
-                <p>37º</p>
-              </Flex>
-              <Box>
-                <p>Brasília</p>
-              </Box>
-            </Flex>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
-              }}
-            >
-              <Flex>
-                <p>24º</p>
-                <p>37º</p>
-              </Flex>
-              <Box>
-                <p>Belém</p>
-              </Box>
-            </Flex>
+            {citiesTwo.map((citie) => {
+              return (
+                <Flex
+                  sx={{
+                    paddingLeft: "0.7rem",
+                    p: {
+                      paddingLeft: "0.5rem",
+                      fontWeight: "bold",
+                      fontSize: 1,
+                    },
+                  }}
+                >
+                  <Flex>
+                    <p>{(Math.random() * (20 - 3) + 3).toFixed()}º</p>
+                    <p>{(Math.random() * (40 - 20) + 20).toFixed()}º</p>
+                  </Flex>
+                  <Flex>
+                    <p>{citie}</p>
+                  </Flex>
+                </Flex>
+              );
+            })}
           </Box>
         </Flex>
       </Box>

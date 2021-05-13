@@ -20,13 +20,13 @@ function Cities() {
   return (
     <Box
       sx={{
-        marginLeft: [null, "2rem", "8.5rem"],
-        marginRight: [null, "2rem", "8.5rem"],
+        marginLeft: ["2rem", "2rem", "8.5rem"],
+        marginRight: ["2rem", "2rem", "8.5rem"],
       }}
     >
       <Text
         sx={{
-          fontSize: [4, 5],
+          fontSize: [4, 4, 5],
           fontWeight: "bold",
           fontFamily: "body",
           color: "white",
@@ -37,7 +37,7 @@ function Cities() {
       </Text>
 
       <Box sx={{ fontFamily: "body" }}>
-        <Flex
+        <Box
           sx={{
             display: ["inline", "inline", "flex"],
           }}
@@ -118,7 +118,7 @@ function Cities() {
               );
             })}
           </Box>
-        </Flex>
+        </Box>
       </Box>
     </Box>
   );

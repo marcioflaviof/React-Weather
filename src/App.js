@@ -26,7 +26,7 @@ function App() {
         >
           <Text
             sx={{
-              fontSize: [6, 7],
+              fontSize: [5, 6, 7],
               fontFamily: "body",
               fontWeight: "bold",
               color: "white",

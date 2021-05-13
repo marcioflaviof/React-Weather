@@ -27,7 +27,7 @@ function Search() {
             height: "50px",
             fontSize: [0, 2, 3],
             width: ["60%", "80%", "100%"],
-            margin: ["auto", null],
+            margin: ["auto", "auto", null],
             "::-webkit-input-placeholder": {
               paddingLeft: "0.5rem",
             },

@@ -9,6 +9,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
+          // Don't know why but if i put [auto,auto], or only let auto doesn't have the same result
           margin: "auto",
           marginTop: "5rem",
           maxWidth: "700px",
@@ -20,21 +21,15 @@ function App() {
         <Box
           sx={{
             textAlign: "center",
-            padding: "3rem",
-            "@media (max-width: 38em)": {
-              padding: "2rem",
-            },
+            padding: ["2rem", "3rem"],
           }}
         >
           <Text
             sx={{
-              fontSize: 7,
-              fontFamily: "Roboto",
+              fontSize: [6, 7],
+              fontFamily: "body",
               fontWeight: "bold",
               color: "white",
-              "@media (max-width: 38em)": {
-                fontSize: 6,
-              },
             }}
           >
             Previsão do tempo

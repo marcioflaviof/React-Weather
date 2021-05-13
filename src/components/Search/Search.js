@@ -16,18 +16,14 @@ function Search() {
         <BiSearch size={"2em"} id="input_icon" />
         <Input
           sx={{
-            fontFamily: "Roboto",
             border: "none",
             boxShadow: "none",
             height: "50px",
-            fontSize: 3,
+            fontSize: [2, 3],
+            width: ["80%", "100%"],
+            margin: ["auto", null],
             "::-webkit-input-placeholder": {
               paddingLeft: "0.5rem",
-            },
-            "@media (max-width: 38em)": {
-              margin: "auto",
-              fontSize: 2,
-              width: "80%",
             },
           }}
           placeholder="Insira aqui o nome da cidade"

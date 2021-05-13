@@ -1,227 +1,205 @@
-import { Box, Text } from "@theme-ui/components";
+import { Box, Flex, Text } from "@theme-ui/components";
 
 function Cities() {
   return (
     <Box
       sx={{
-        marginLeft: "8.5rem",
-        marginRight: "8.5rem",
-        "@media (max-width: 38em)": {
-          marginLeft: "2rem",
-          marginRight: "2rem",
-        },
+        marginLeft: ["2rem", "8.5rem"],
+        marginRight: ["2rem", "8.5rem"],
       }}
     >
       <Text
         sx={{
-          fontSize: [5],
+          fontSize: [4, 5],
           fontWeight: "bold",
-          fontFamily: "Roboto",
+          fontFamily: "body",
           color: "white",
           marginLeft: "1rem",
-          "@media (max-width: 38em)": {
-            fontSize: [4],
-          },
         }}
       >
         Capitais
       </Text>
 
-      <Box sx={{ fontFamily: "Roboto" }}>
-        <Box
+      <Box sx={{ fontFamily: "body" }}>
+        <Flex
           sx={{
-            display: "flex",
             "@media (max-width: 38em)": {
               display: "inline",
             },
           }}
         >
           <Box sx={{ flex: 1 }}>
-            <Box
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
                 p: {
                   paddingLeft: "0.5rem",
                   color: "#8C6011",
-                  fontSize: [0],
+                  fontSize: 0,
                 },
               }}
             >
               <p>Min</p>
               <p>Máx</p>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>18º</p>
                 <p>27º</p>
-              </Box>
-              <Box sx={{ display: "flex" }}>
+              </Flex>
+              <Flex>
                 <p>Rio de Janeiro</p>
-              </Box>
-            </Box>
-            <Box
+              </Flex>
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>14º</p>
                 <p>22º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>São Paulo</p>
               </Box>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>21º</p>
                 <p>32º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>Belo Horizonte</p>
               </Box>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>24º</p>
                 <p>37º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>Brasília</p>
               </Box>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>24º</p>
                 <p>37º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>Belém</p>
               </Box>
-            </Box>
+            </Flex>
           </Box>
           <Box>
-            <Box
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
                 p: {
                   paddingLeft: "0.5rem",
                   color: "#8C6011",
                   fontSize: [0],
-                },
-                "@media (max-width: 38em)": {
-                  display: "none",
+                  display: ["none", "flex"],
                 },
               }}
             >
               <p>Min</p>
               <p>Máx</p>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
-                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: 1 },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>18º</p>
                 <p>27º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>Rio de Janeiro</p>
               </Box>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
                 p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>14º</p>
                 <p>22º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>São Paulo</p>
               </Box>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
                 p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>21º</p>
                 <p>32º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>Belo Horizonte</p>
               </Box>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
                 p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>24º</p>
                 <p>37º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>Brasília</p>
               </Box>
-            </Box>
-            <Box
+            </Flex>
+            <Flex
               sx={{
-                display: "flex",
                 paddingLeft: "0.7rem",
                 p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
-              <Box sx={{ display: "flex" }}>
+              <Flex>
                 <p>24º</p>
                 <p>37º</p>
-              </Box>
+              </Flex>
               <Box>
                 <p>Belém</p>
               </Box>
-            </Box>
+            </Flex>
           </Box>
-        </Box>
+        </Flex>
       </Box>
     </Box>
   );

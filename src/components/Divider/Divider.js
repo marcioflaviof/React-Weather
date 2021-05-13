@@ -8,13 +8,9 @@ function Divider() {
         height: "0.2rem",
         margin: "auto",
         marginTop: "4rem",
-        width: "80%",
+        width: ["100%", "80%"],
         marginBottom: "1rem",
-        "@media (max-width: 38em)": {
-          width: "100%",
-        },
       }}
-      className="divider"
     />
   );
 }

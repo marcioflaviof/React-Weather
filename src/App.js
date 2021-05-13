@@ -7,14 +7,34 @@ import Cities from "./components/Cities/Cities";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ margin: "auto", marginTop: "5rem", maxWidth: "700px" }}>
-        <Box sx={{ textAlign: "center", padding: "3rem" }}>
+      <Box
+        sx={{
+          margin: "auto",
+          marginTop: "5rem",
+          maxWidth: "700px",
+          "@media (max-width: 38em)": {
+            margin: "auto",
+          },
+        }}
+      >
+        <Box
+          sx={{
+            textAlign: "center",
+            padding: "3rem",
+            "@media (max-width: 38em)": {
+              padding: "2rem",
+            },
+          }}
+        >
           <Text
             sx={{
               fontSize: 7,
               fontFamily: "Roboto",
               fontWeight: "bold",
               color: "white",
+              "@media (max-width: 38em)": {
+                fontSize: 6,
+              },
             }}
           >
             Previsão do tempo

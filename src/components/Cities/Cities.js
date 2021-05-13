@@ -19,6 +19,9 @@ function Cities() {
           fontFamily: "Roboto",
           color: "white",
           marginLeft: "1rem",
+          "@media (max-width: 38em)": {
+            fontSize: [4],
+          },
         }}
       >
         Capitais

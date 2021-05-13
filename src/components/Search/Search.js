@@ -4,12 +4,15 @@ import { BiSearch } from "react-icons/bi";
 
 function Search() {
   return (
-    <div className="box">
+    <Box sx={{ maxWidth: "450px", margin: "auto" }}>
       <Box>
         <BiSearch id="input_icon" />
-        <Input placeholder="Insira aqui o nome da cidade" />
+        <Input
+          sx={{ fontFamily: "Roboto", border: "none", boxShadow: "none" }}
+          placeholder="Insira aqui o nome da cidade"
+        />
       </Box>
-    </div>
+    </Box>
   );
 }
 

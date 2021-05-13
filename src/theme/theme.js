@@ -1,7 +1,13 @@
 const themes = {
   fontSizes: [12, 16, 24, 28, 36, 48, 64],
+  fonts: {
+    body: "Roboto",
+    heading: "serif",
+  },
+  breakpoints: ["@media (max-width: 37.5em)"],
+
   colors: {
-    background: "#f98e01",
+    background: "#F98E01",
   },
   forms: {
     input: {

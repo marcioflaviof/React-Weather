@@ -1,15 +1,5 @@
-div .box {
-  max-width: 350px;
-  margin: auto;
-}
-
-div .box input {
-  border: none;
-  box-shadow: none;
-}
-
 #input_icon {
   position: absolute;
-  margin-left: 20rem;
+  margin-left: 26rem;
   margin-top: 10px;
 }

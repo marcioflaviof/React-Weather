@@ -20,8 +20,8 @@ function Cities() {
   return (
     <Box
       sx={{
-        marginLeft: ["2rem", "8.5rem"],
-        marginRight: ["2rem", "8.5rem"],
+        marginLeft: [null, "2rem", "8.5rem"],
+        marginRight: [null, "2rem", "8.5rem"],
       }}
     >
       <Text
@@ -39,9 +39,7 @@ function Cities() {
       <Box sx={{ fontFamily: "body" }}>
         <Flex
           sx={{
-            "@media (max-width: 38em)": {
-              display: "inline",
-            },
+            display: ["inline", "inline", "flex"],
           }}
         >
           <Box sx={{ flex: 1 }}>
@@ -90,7 +88,7 @@ function Cities() {
                   paddingLeft: "0.5rem",
                   color: "#8C6011",
                   fontSize: [0],
-                  display: ["none", "flex"],
+                  display: ["none", "none", "flex"],
                 },
               }}
             >

@@ -4,7 +4,7 @@ const themes = {
     body: "Roboto, sans-serif",
     heading: "serif",
   },
-  breakpoints: ["38em"],
+  breakpoints: ["23em", "28.75em", "38em"],
 
   colors: {
     background: "#F98E01",

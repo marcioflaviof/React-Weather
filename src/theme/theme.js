@@ -1,5 +1,5 @@
 const themes = {
-  fontSizes: [12, 16, 24, 28, 36, 48, 64],
+  fontSizes: [12, 14, 16, 24, 28, 36, 48, 64],
   fonts: {
     body: "Roboto",
     heading: "serif",

@@ -11,7 +11,7 @@ function App() {
         <Box sx={{ textAlign: "center", padding: "3rem" }}>
           <Text
             sx={{
-              fontSize: 6,
+              fontSize: 7,
               fontFamily: "Roboto",
               fontWeight: "bold",
               color: "white",

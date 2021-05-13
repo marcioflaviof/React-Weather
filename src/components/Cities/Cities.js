@@ -4,8 +4,8 @@ function Cities() {
   return (
     <Box
       sx={{
-        marginLeft: "7rem",
-        marginRight: "7rem",
+        marginLeft: "8.5rem",
+        marginRight: "8.5rem",
         "@media (max-width: 38em)": {
           marginLeft: "2rem",
           marginRight: "2rem",
@@ -14,7 +14,7 @@ function Cities() {
     >
       <Text
         sx={{
-          fontSize: 3,
+          fontSize: [5],
           fontWeight: "bold",
           fontFamily: "Roboto",
           color: "white",
@@ -37,8 +37,9 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
+                paddingLeft: "0.7rem",
                 p: {
-                  paddingLeft: "1rem",
+                  paddingLeft: "0.5rem",
                   color: "#8C6011",
                   fontSize: [0],
                 },
@@ -50,7 +51,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { paddingLeft: "1.25rem", fontWeight: "bold" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -64,7 +66,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -78,7 +81,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -92,7 +96,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -106,7 +111,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -122,8 +128,9 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
+                paddingLeft: "0.7rem",
                 p: {
-                  paddingLeft: "1rem",
+                  paddingLeft: "0.5rem",
                   color: "#8C6011",
                   fontSize: [0],
                 },
@@ -138,7 +145,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -152,7 +160,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -166,7 +175,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -180,7 +190,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>
@@ -194,7 +205,8 @@ function Cities() {
             <Box
               sx={{
                 display: "flex",
-                p: { fontWeight: "bold", paddingLeft: "1.25rem" },
+                paddingLeft: "0.7rem",
+                p: { paddingLeft: "0.5rem", fontWeight: "bold", fontSize: [1] },
               }}
             >
               <Box sx={{ display: "flex" }}>

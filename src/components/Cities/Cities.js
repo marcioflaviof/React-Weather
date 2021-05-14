@@ -1,20 +1,17 @@
 import { Box, Flex, Text } from "@theme-ui/components";
 
 function Cities() {
-  const cities = [
-    "Rio de Janeiro",
-    "São Paulo",
-    "Belo Horizonte",
-    "Brasília",
-    "Belém",
-  ];
-
-  const citiesTwo = [
-    "Salvador",
-    "Curitiba",
-    "Fortaleza",
-    "Manaus",
-    "João Pessoa",
+  const citiesObject = [
+    { name: "Rio de Janeiro", min: "17", max: "23" },
+    { name: "São Paulo", min: "14", max: "22" },
+    { name: "Belo Horizonte", min: "21", max: "32" },
+    { name: "Brasília", min: "24", max: "37" },
+    { name: "Belém", min: "24", max: "37" },
+    { name: "Salvador", min: "23", max: "37" },
+    { name: "Curitiba", min: "5", max: "14" },
+    { name: "Fortaleza", min: "21", max: "32" },
+    { name: "Manaus", min: "24", max: "37" },
+    { name: "João Pessoa", min: "28", max: "40" },
   ];
 
   return (
@@ -28,95 +25,70 @@ function Cities() {
         sx={{
           fontSize: [4, 4, 5],
           fontWeight: "bold",
-          fontFamily: "body",
           color: "white",
           marginLeft: "1rem",
         }}
       >
         Capitais
       </Text>
-
       <Box sx={{ fontFamily: "body" }}>
         <Box
           sx={{
             display: ["inline", "inline", "flex"],
           }}
         >
-          <Box sx={{ flex: 1 }}>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: {
-                  paddingLeft: "0.5rem",
-                  color: "#8C6011",
-                  fontSize: 0,
-                },
-              }}
-            >
-              <p>Min</p>
-              <p>Máx</p>
-            </Flex>
-
-            {cities.map((citie) => {
-              return (
-                <Flex
-                  sx={{
-                    paddingLeft: "0.7rem",
-                    p: {
-                      paddingLeft: "0.5rem",
-                      fontWeight: "bold",
-                      fontSize: 1,
-                    },
-                  }}
-                >
-                  <Flex>
-                    <p>{(Math.random() * (20 - 3) + 3).toFixed()}º</p>
-                    <p>{(Math.random() * (40 - 20) + 20).toFixed()}º</p>
-                  </Flex>
-                  <Flex>
-                    <p>{citie}</p>
-                  </Flex>
-                </Flex>
-              );
-            })}
-          </Box>
           <Box>
-            <Flex
-              sx={{
-                paddingLeft: "0.7rem",
-                p: {
-                  paddingLeft: "0.5rem",
-                  color: "#8C6011",
-                  fontSize: [0],
+            <Flex>
+              <Flex
+                sx={{
+                  paddingLeft: "0.7rem",
+                  p: {
+                    paddingLeft: "0.5rem",
+                    color: "#8C6011",
+                    fontSize: 0,
+                  },
+                }}
+              >
+                <p>Min</p>
+                <p>Máx</p>
+              </Flex>
+              <Box
+                sx={{
+                  marginLeft: "7.6rem",
+                  paddingLeft: "0.7rem",
                   display: ["none", "none", "flex"],
-                },
-              }}
-            >
-              <p>Min</p>
-              <p>Máx</p>
+                  p: {
+                    paddingLeft: "0.5rem",
+                    color: "#8C6011",
+                    fontSize: 0,
+                  },
+                }}
+              >
+                <p>Min</p>
+                <p>Máx</p>
+              </Box>
             </Flex>
-            {citiesTwo.map((citie) => {
-              return (
-                <Flex
-                  sx={{
-                    paddingLeft: "0.7rem",
-                    p: {
-                      paddingLeft: "0.5rem",
-                      fontWeight: "bold",
-                      fontSize: 1,
-                    },
-                  }}
-                >
-                  <Flex>
-                    <p>{(Math.random() * (20 - 3) + 3).toFixed()}º</p>
-                    <p>{(Math.random() * (40 - 20) + 20).toFixed()}º</p>
+            <Box sx={{ columns: [null, null, "100px 2"] }}>
+              {citiesObject.map((citie, index) => {
+                return (
+                  <Flex
+                    key={index}
+                    sx={{
+                      paddingLeft: "0.7rem",
+                      p: {
+                        paddingLeft: "0.5rem",
+                        fontWeight: "bold",
+                        fontSize: 1,
+                      },
+                    }}
+                  >
+                    <p>{citie.min}º</p>
+                    <p>{citie.max}º</p>
+                    <p>{citie.name}</p>
                   </Flex>
-                  <Flex>
-                    <p>{citie}</p>
-                  </Flex>
-                </Flex>
-              );
-            })}
+                );
+              })}
+            </Box>
           </Box>
         </Box>
       </Box>

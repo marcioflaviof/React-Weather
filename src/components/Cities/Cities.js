@@ -54,7 +54,7 @@ function Cities() {
               </Flex>
               <Box
                 sx={{
-                  marginLeft: "7.6rem",
+                  marginLeft: "9.1rem",
                   paddingLeft: "0.7rem",
                   display: ["none", "none", "flex"],
                   p: {
@@ -68,7 +68,7 @@ function Cities() {
                 <p>Máx</p>
               </Box>
             </Flex>
-            <Box sx={{ columns: [null, null, "100px 2"] }}>
+            <Box sx={{ columns: [null, null, "100px 2"], columnGap: "40px" }}>
               {citiesObject.map((citie, index) => {
                 return (
                   <Flex

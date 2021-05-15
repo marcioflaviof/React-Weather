@@ -31,7 +31,7 @@ function Cities() {
       >
         Capitais
       </Text>
-      <Box sx={{ fontFamily: "body" }}>
+      <Box>
         <Box
           sx={{
             display: ["inline", "inline", "flex"],

@@ -14,6 +14,12 @@ const themes = {
       background: "white",
     },
   },
+
+  styles: {
+    root: {
+      fontFamily: "body",
+    },
+  },
 };
 
 export default themes;

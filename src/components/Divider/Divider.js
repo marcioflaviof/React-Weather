@@ -7,7 +7,7 @@ function Divider({ sx }) {
         background: "white",
         opacity: "70%",
         height: "1px",
-        width: ["100%", "100%", "80%"],
+        width: "100%",
       }}
     />
   );

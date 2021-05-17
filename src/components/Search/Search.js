@@ -23,7 +23,7 @@ function Search({ sx }) {
         <Input
           sx={{
             borderColor: "orange",
-            padding: ["15px", "20px"],
+            padding: ["15px", "25px", "20px"],
             borderRadius: 0,
             outline: "none",
             fontSize: [0, 2, 3],

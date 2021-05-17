@@ -18,7 +18,7 @@ function Search({ sx }) {
             marginTop: ["12px", "23px"],
           }}
         >
-          <GrSearch size={"1.5em"} id="input_icon" />
+          <GrSearch size={"1.5em"} />
         </Box>
         <Input
           sx={{

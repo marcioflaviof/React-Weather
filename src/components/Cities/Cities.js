@@ -1,96 +1,83 @@
-import { Box, Flex, Text } from "@theme-ui/components";
+import { Box, Text } from "@theme-ui/components";
+
+const sx = {
+  column: {
+    columns: [null, null, "100px 2"],
+    columnGap: "40px",
+  },
+  span: {
+    title: {
+      display: "inline-block",
+      m: "0 5px",
+    },
+
+    city: {
+      display: "inline-block",
+      minWidth: "18px",
+      m: "10px 10px",
+    },
+  },
+};
 
 function Cities() {
-  const citiesObject = [
-    { name: "Rio de Janeiro", min: "17", max: "23" },
-    { name: "São Paulo", min: "14", max: "22" },
-    { name: "Belo Horizonte", min: "21", max: "32" },
-    { name: "Brasília", min: "24", max: "37" },
-    { name: "Belém", min: "24", max: "37" },
-    { name: "Salvador", min: "23", max: "37" },
-    { name: "Curitiba", min: "5", max: "14" },
-    { name: "Fortaleza", min: "21", max: "32" },
-    { name: "Manaus", min: "24", max: "37" },
-    { name: "João Pessoa", min: "28", max: "40" },
+  const cities = [
+    { name: "Rio de Janeiro", min: "17º", max: "23º" },
+    { name: "São Paulo", min: "14º", max: "22º" },
+    { name: "Belo Horizonte", min: "21º", max: "32º" },
+    { name: "Brasília", min: "24º", max: "37º" },
+    { name: "Belém", min: "24º", max: "37º" },
+    { name: "Salvador", min: "23º", max: "37º" },
+    { name: "Curitiba", min: "5º", max: "14º" },
+    { name: "Fortaleza", min: "21º", max: "32º" },
+    { name: "Manaus", min: "24º", max: "37º" },
+    { name: "João Pessoa", min: "28º", max: "40º" },
   ];
 
   return (
     <Box
       sx={{
-        marginLeft: ["2rem", "2rem", "8.5rem"],
-        marginRight: ["2rem", "2rem", "8.5rem"],
+        marginLeft: ["2rem", "2rem", "7.5rem"],
+        marginRight: ["2rem", "2rem", "7.5rem"],
       }}
     >
-      <Text
-        sx={{
-          fontSize: [4, 4, 5],
-          fontWeight: "bold",
-          color: "white",
-          marginLeft: "1rem",
-        }}
-      >
-        Capitais
-      </Text>
-      <Box>
+      <Text variant="title">Capitais</Text>
+
+      <Box sx={{ ...sx.column, m: "10px 0" }}>
+        <Box>
+          <Text variant="small" sx={sx.span.title}>
+            Min
+          </Text>
+          <Text variant="small" sx={sx.span.title}>
+            Máx
+          </Text>
+        </Box>
         <Box
           sx={{
-            display: ["inline", "inline", "flex"],
+            display: ["none", "none", "inline-block"],
           }}
         >
-          <Box>
-            <Flex>
-              <Flex
-                sx={{
-                  paddingLeft: "0.7rem",
-                  p: {
-                    paddingLeft: "0.5rem",
-                    color: "#8C6011",
-                    fontSize: 0,
-                  },
-                }}
-              >
-                <p>Min</p>
-                <p>Máx</p>
-              </Flex>
-              <Box
-                sx={{
-                  marginLeft: "9.1rem",
-                  paddingLeft: "0.7rem",
-                  display: ["none", "none", "flex"],
-                  p: {
-                    paddingLeft: "0.5rem",
-                    color: "#8C6011",
-                    fontSize: 0,
-                  },
-                }}
-              >
-                <p>Min</p>
-                <p>Máx</p>
-              </Box>
-            </Flex>
-            <Box sx={{ columns: [null, null, "100px 2"], columnGap: "40px" }}>
-              {citiesObject.map((citie, index) => {
-                return (
-                  <Flex
-                    key={index}
-                    sx={{
-                      paddingLeft: "0.7rem",
-                      p: {
-                        paddingLeft: "0.5rem",
-                        fontWeight: "bold",
-                        fontSize: 1,
-                      },
-                    }}
-                  >
-                    <p>{citie.min}º</p>
-                    <p>{citie.max}º</p>
-                    <p>{citie.name}</p>
-                  </Flex>
-                );
-              })}
-            </Box>
-          </Box>
+          <Text variant="small" sx={sx.span.title}>
+            Min
+          </Text>
+          <Text variant="small" sx={sx.span.title}>
+            Máx
+          </Text>
         </Box>
+      </Box>
+      <Box sx={sx.column}>
+        {cities.map((city, index) => (
+          <Box key={index}>
+            <Text variant="small" sx={sx.span.city}>
+              {city.min}
+            </Text>
+            <Text variant="small" sx={sx.span.city}>
+              {city.max}
+            </Text>
+            <Text variant="small" sx={sx.span.city}>
+              {city.name}
+            </Text>
+          </Box>
+        ))}
       </Box>
     </Box>
   );

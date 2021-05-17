@@ -9,33 +9,20 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          // Don't know why but if i put [auto,auto], or only let auto doesn't have the same result
           margin: "auto",
-          marginTop: "5rem",
           maxWidth: "700px",
-          "@media (max-width: 38em)": {
-            margin: "auto",
-          },
         }}
       >
         <Box
           sx={{
-            textAlign: "center",
-            padding: ["2rem", "3rem"],
+            margin: ["50px 100px 0px 50px", "100px 0px 0px"],
+            textAlign: ["left", "center"],
           }}
         >
-          <Text
-            sx={{
-              fontSize: [5, 6, 7],
-              fontWeight: "bold",
-              color: "white",
-            }}
-          >
-            Previsão do tempo
-          </Text>
+          <Text variant="heading">Previsão do tempo</Text>
         </Box>
-        <Search />
-        <Divider />
+        <Search sx={{ margin: ["30px", "80px auto 0px"] }} />
+        <Divider sx={{ margin: "50px 0px 20px" }} />
         <Cities />
       </Box>
     </ThemeProvider>

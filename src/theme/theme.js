@@ -7,7 +7,6 @@ const themes = {
   breakpoints: ["512px", "768px", "1024px", "1152px", "1440px"],
 
   colors: {
-    background: "#F98E01",
     orange: "#E78600",
   },
   forms: {
@@ -37,6 +36,8 @@ const themes = {
   styles: {
     root: {
       fontFamily: "body",
+      background: "linear-gradient(to top, #FFB401, #F98E01)",
+      minHeight: "100vh",
     },
   },
 };

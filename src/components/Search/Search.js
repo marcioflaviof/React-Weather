@@ -26,7 +26,7 @@ function Search({ sx }) {
             padding: ["15px", "25px", "20px"],
             borderRadius: 0,
             outline: "none",
-            fontSize: [0, 2, 3],
+            fontSize: [0, 3],
           }}
           placeholder="Insira aqui o nome da cidade"
         />

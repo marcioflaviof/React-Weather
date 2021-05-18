@@ -1,4 +1,5 @@
 import { Box, Text } from "@theme-ui/components";
+import useWeather from "../../hooks/useWeather";
 
 const sx = {
   column: {
@@ -20,18 +21,7 @@ const sx = {
 };
 
 function Cities() {
-  const cities = [
-    { name: "Rio de Janeiro", min: "17º", max: "23º" },
-    { name: "São Paulo", min: "14º", max: "22º" },
-    { name: "Belo Horizonte", min: "21º", max: "32º" },
-    { name: "Brasília", min: "24º", max: "37º" },
-    { name: "Belém", min: "24º", max: "37º" },
-    { name: "Salvador", min: "23º", max: "37º" },
-    { name: "Curitiba", min: "5º", max: "14º" },
-    { name: "Fortaleza", min: "21º", max: "32º" },
-    { name: "Manaus", min: "24º", max: "37º" },
-    { name: "João Pessoa", min: "28º", max: "40º" },
-  ];
+  const [cities] = useWeather();
 
   return (
     <Box
@@ -65,19 +55,21 @@ function Cities() {
         </Box>
       </Box>
       <Box sx={sx.column}>
-        {cities.map((city, index) => (
-          <Box key={index}>
-            <Text variant="small" sx={sx.span.city}>
-              {city.min}
-            </Text>
-            <Text variant="small" sx={sx.span.city}>
-              {city.max}
-            </Text>
-            <Text variant="small" sx={sx.span.city}>
-              {city.name}
-            </Text>
-          </Box>
-        ))}
+        {cities
+          ? cities.map((city, index) => (
+              <Box key={index}>
+                <Text variant="small" sx={sx.span.city}>
+                  {city.min}
+                </Text>
+                <Text variant="small" sx={sx.span.city}>
+                  {city.max}
+                </Text>
+                <Text variant="small" sx={sx.span.city}>
+                  {city.name}
+                </Text>
+              </Box>
+            ))
+          : "Loading"}
       </Box>
     </Box>
   );

@@ -1,5 +1,5 @@
 import { Box, Text } from "@theme-ui/components";
-import useWeather from "./useWeather";
+import useWeather from "../../hooks/useWeather";
 
 const sx = {
   column: {

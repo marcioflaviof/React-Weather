@@ -25,8 +25,6 @@ function useWeather() {
     fetchData();
   });
 
-  console.log(cities);
-
   return [cities];
 }
 

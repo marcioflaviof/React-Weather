@@ -22,7 +22,12 @@ function App() {
         >
           <Text variant="heading">Previsão do tempo</Text>
         </Box>
-        <DetailsCard sx={{ margin: "30px auto 0px" }} />
+        <DetailsCard
+          sx={{
+            display: ["none", "none", "block", "block"],
+            margin: "30px auto 0px",
+          }}
+        />
         <Search sx={{ margin: ["30px", "25px auto 0px"] }} />
         <Divider sx={{ margin: "50px 0px 20px" }} />
         <Cities />

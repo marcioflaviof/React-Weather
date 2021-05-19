@@ -4,14 +4,14 @@ import useCity from "../../hooks/useCity";
 
 const weekText = {
   days: {
-    marginLeft: "25px",
+    marginLeft: "30px",
     fontWeight: "bold",
   },
 
   temp: {
-    marginLeft: "20px",
+    marginLeft: "25px",
     fontWeight: "bold",
-    color: "#F98E01",
+    color: "orange",
   },
 };
 
@@ -28,94 +28,64 @@ function DetailsCard({ sx }) {
       }}
     >
       {details ? (
-        <Box>
+        <Box sx={{ padding: "10px 0px 0px 45px" }}>
           <Box
             sx={{
-              padding: "20px",
-              marginLeft: "20px",
+              padding: "20px 0px",
               fontSize: "2",
-              fontWeight: "bold",
             }}
           >
-            <Text>
+            <Text variant="bold">
               {details.name}, {details.state} - {details.country}
             </Text>
           </Box>
           <Box
             sx={{
-              padding: "5px 20px",
-              marginLeft: "20px",
               fontSize: "6",
-              fontWeight: "bold",
             }}
           >
-            <Text>
+            <Text variant="bold">
               {details.temp} {details.weather}
             </Text>
           </Box>
           <Box
             sx={{
-              justifyContent: "flex-start",
-              padding: "10px",
-              margin: "0px 30px",
+              margin: "0px 0px 0px -5px",
+              padding: "10px 0px",
             }}
           >
-            <BsArrowDown color={"#F98E01"} />
-            <Text
-              sx={{
-                marginRight: "20px",
-                fontWeight: "bold",
-              }}
-            >
-              {details.min_temp}
-            </Text>
+            <BsArrowDown color={"orange"} />
+            <Text variant="bold">{details.min_temp}</Text>
 
-            <BsArrowUp color={"#F98E01"} />
-            <Text
-              sx={{
-                fontWeight: "bold",
-              }}
-            >
-              {details.max_temp}
-            </Text>
-            <Text
-              sx={{
-                marginLeft: "30px",
-              }}
-            >
+            <BsArrowUp color={"orange"} />
+            <Text variant="bold">{details.max_temp}</Text>
+            <Text sx={{ padding: "0px 50px" }}>
               Sensação <strong>{details.sensation}</strong>
             </Text>
           </Box>
           <Box
             sx={{
-              padding: "10px",
-              marginLeft: "30px",
+              padding: "10px 0px",
             }}
           >
             <Text>
               Vento <strong>{details.wind} </strong>
             </Text>
-            <Text
-              sx={{
-                marginLeft: "25px",
-              }}
-            >
+            <Text sx={{ padding: "0px 20px" }}>
               Umidade <strong> {details.humidity} </strong>
             </Text>
           </Box>
           <Box
             sx={{
-              margin: "10px 23px 10px",
-              background: "#F98E01",
+              margin: "10px 0px 15px -23px",
+              background: "orange",
               opacity: "70%",
               height: "2px",
-              width: "90%",
+              width: "100%",
             }}
           />
           <Box>
-            <Text sx={{ ...weekText.days, padding: "0px 0px 0px 15px" }}>
-              {details.weekDays.dayOne.name}
-            </Text>
+            <Text variant="bold">{details.weekDays.dayOne.name}</Text>
             <Text sx={{ ...weekText.days }}>
               {details.weekDays.dayTwo.name}
             </Text>
@@ -130,7 +100,7 @@ function DetailsCard({ sx }) {
             </Text>
           </Box>
           <Box>
-            <Text sx={{ ...weekText.temp, padding: "0px 0px 0px 20px" }}>
+            <Text variant="bold" sx={{ color: "orange" }}>
               {details.weekDays.dayOne.min} {details.weekDays.dayOne.max}
             </Text>
             <Text sx={{ ...weekText.temp }}>

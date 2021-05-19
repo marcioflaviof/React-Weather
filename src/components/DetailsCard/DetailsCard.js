@@ -14,6 +14,46 @@ const weekText = {
   },
 };
 
+const city = {
+  name: "Niterói",
+  state: "RJ",
+  country: "Brasil",
+  temp: "20ºC",
+  weather: "Nublado",
+  min_temp: "16º",
+  max_temp: "25º",
+  sensation: "19ºC",
+  wind: "18km/h",
+  humidity: "89%",
+  weekDays: {
+    dayOne: {
+      name: "Terça",
+      min: "18º",
+      max: "26º",
+    },
+    dayTwo: {
+      name: "Quarta",
+      min: "18º",
+      max: "28º",
+    },
+    dayThree: {
+      name: "Quinta",
+      min: "19º",
+      max: "30º",
+    },
+    dayFour: {
+      name: "Sexta",
+      min: "23º",
+      max: "35º",
+    },
+    dayFive: {
+      name: "Sábado",
+      min: "23º",
+      max: "37º",
+    },
+  },
+};
+
 function DetailsCard({ sx }) {
   return (
     <Box
@@ -32,7 +72,9 @@ function DetailsCard({ sx }) {
           fontWeight: "bold",
         }}
       >
-        <Text>Niterói, Rj - Brasil</Text>
+        <Text>
+          {city.name}, {city.state} - {city.country}
+        </Text>
       </Box>
       <Box
         sx={{
@@ -42,7 +84,9 @@ function DetailsCard({ sx }) {
           fontWeight: "bold",
         }}
       >
-        <Text>20ºC Nublado</Text>
+        <Text>
+          {city.temp} {city.weather}
+        </Text>
       </Box>
       <Box
         sx={{
@@ -55,19 +99,26 @@ function DetailsCard({ sx }) {
         <Text
           sx={{
             marginRight: "20px",
+            fontWeight: "bold",
           }}
         >
-          16º
+          {city.min_temp}
         </Text>
 
         <BsArrowUp color={"#F98E01"} />
-        <Text>25º</Text>
+        <Text
+          sx={{
+            fontWeight: "bold",
+          }}
+        >
+          {city.max_temp}
+        </Text>
         <Text
           sx={{
             marginLeft: "23px",
           }}
         >
-          Sensação 19ºC
+          Sensação {city.sensation}
         </Text>
       </Box>
       <Box
@@ -76,13 +127,13 @@ function DetailsCard({ sx }) {
           marginLeft: "30px",
         }}
       >
-        <Text>Vento 18km/h</Text>
+        <Text>Vento {city.wind}</Text>
         <Text
           sx={{
             marginLeft: "25px",
           }}
         >
-          Umidade 89%
+          Umidade {city.humidity}
         </Text>
       </Box>
       <Box
@@ -96,21 +147,29 @@ function DetailsCard({ sx }) {
       />
       <Box>
         <Text sx={{ ...weekText.days, padding: "0px 0px 0px 15px" }}>
-          Terça
+          {city.weekDays.dayOne.name}
         </Text>
-        <Text sx={{ ...weekText.days }}>Quarta</Text>
-        <Text sx={{ ...weekText.days }}>Quinta</Text>
-        <Text sx={{ ...weekText.days }}>Sexta</Text>
-        <Text sx={{ ...weekText.days }}>Sábado</Text>
+        <Text sx={{ ...weekText.days }}>{city.weekDays.dayTwo.name}</Text>
+        <Text sx={{ ...weekText.days }}>{city.weekDays.dayThree.name}</Text>
+        <Text sx={{ ...weekText.days }}>{city.weekDays.dayFour.name}</Text>
+        <Text sx={{ ...weekText.days }}>{city.weekDays.dayFive.name}</Text>
       </Box>
       <Box>
         <Text sx={{ ...weekText.temp, padding: "0px 0px 0px 20px" }}>
-          18º 26º
+          {city.weekDays.dayOne.min} {city.weekDays.dayOne.max}
         </Text>
-        <Text sx={{ ...weekText.temp }}>18º 28º</Text>
-        <Text sx={{ ...weekText.temp }}>19º 30º</Text>
-        <Text sx={{ ...weekText.temp }}>23º 35º</Text>
-        <Text sx={{ ...weekText.temp }}>23º 37º</Text>
+        <Text sx={{ ...weekText.temp }}>
+          {city.weekDays.dayTwo.min} {city.weekDays.dayTwo.max}
+        </Text>
+        <Text sx={{ ...weekText.temp }}>
+          {city.weekDays.dayThree.min} {city.weekDays.dayThree.max}
+        </Text>
+        <Text sx={{ ...weekText.temp }}>
+          {city.weekDays.dayFour.min} {city.weekDays.dayFour.max}
+        </Text>
+        <Text sx={{ ...weekText.temp }}>
+          {city.weekDays.dayFive.min} {city.weekDays.dayFive.max}
+        </Text>
       </Box>
     </Box>
   );

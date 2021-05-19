@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@theme-ui/components";
+import { Box, Text } from "@theme-ui/components";
 import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 import useCity from "../../hooks/useCity";
 import Divider from "../Divider/Divider";

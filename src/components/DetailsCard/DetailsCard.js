@@ -1,6 +1,7 @@
-import { Box, Text } from "@theme-ui/components";
+import { Box, Flex, Text } from "@theme-ui/components";
 import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 import useCity from "../../hooks/useCity";
+import Divider from "../Divider/Divider";
 
 const weekText = {
   days: {
@@ -28,19 +29,13 @@ function DetailsCard({ sx }) {
       }}
     >
       {details ? (
-        <Box sx={{ padding: "10px 0px 0px 45px" }}>
+        <Box sx={{ padding: "30px 45px" }}>
+          <Text variant="bold" sx={{ fontSize: "2" }}>
+            {details.name}, {details.state} - {details.country}
+          </Text>
           <Box
             sx={{
-              padding: "20px 0px",
-              fontSize: "2",
-            }}
-          >
-            <Text variant="bold">
-              {details.name}, {details.state} - {details.country}
-            </Text>
-          </Box>
-          <Box
-            sx={{
+              paddingTop: "20px",
               fontSize: "6",
             }}
           >
@@ -59,29 +54,26 @@ function DetailsCard({ sx }) {
 
             <BsArrowUp color={"orange"} />
             <Text variant="bold">{details.max_temp}</Text>
-            <Text sx={{ padding: "0px 50px" }}>
-              Sensação <strong>{details.sensation}</strong>
-            </Text>
+            <Text sx={{ padding: "0px 5px 0px 48px" }}>Sensação</Text>
+            <Text variant="bold">{details.sensation}</Text>
           </Box>
           <Box
             sx={{
               padding: "10px 0px",
             }}
           >
-            <Text>
-              Vento <strong>{details.wind} </strong>
+            <Text>Vento</Text>
+            <Text variant="bold" sx={{ paddingLeft: "7px" }}>
+              {details.wind}
             </Text>
-            <Text sx={{ padding: "0px 20px" }}>
-              Umidade <strong> {details.humidity} </strong>
-            </Text>
+            <Text sx={{ padding: "0px 15px 0px 20px" }}>Umidade</Text>
+            <Text variant="bold">{details.humidity}</Text>
           </Box>
-          <Box
+          <Divider
             sx={{
               margin: "10px 0px 15px -23px",
               background: "orange",
-              opacity: "70%",
-              height: "2px",
-              width: "100%",
+              width: "110%",
             }}
           />
           <Box>

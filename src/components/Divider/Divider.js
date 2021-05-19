@@ -3,11 +3,11 @@ function Divider({ sx }) {
   return (
     <Box
       sx={{
-        ...sx,
-        background: "white",
         opacity: "70%",
-        height: "1px",
+        height: "2px",
         width: "100%",
+        background: "white",
+        ...sx,
       }}
     />
   );

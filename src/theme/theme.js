@@ -7,7 +7,7 @@ const themes = {
   breakpoints: ["512px", "768px", "1024px", "1152px", "1440px"],
 
   colors: {
-    orange: "#E78600",
+    orange: "#F98E01",
   },
   forms: {
     input: {
@@ -29,6 +29,9 @@ const themes = {
     small: {
       fontSize: 1,
       color: "#222",
+      fontWeight: "bold",
+    },
+    bold: {
       fontWeight: "bold",
     },
   },

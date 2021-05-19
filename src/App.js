@@ -3,6 +3,7 @@ import theme from "./theme/theme";
 import Divider from "./components/Divider/Divider";
 import Search from "./components/Search/Search";
 import Cities from "./components/Cities/Cities";
+import DetailsCard from "./components/DetailsCard/DetailsCard";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         >
           <Text variant="heading">Previsão do tempo</Text>
         </Box>
-        <Search sx={{ margin: ["30px", "80px auto 0px"] }} />
+        <DetailsCard sx={{ margin: "30px auto 0px" }} />
+        <Search sx={{ margin: ["30px", "25px auto 0px"] }} />
         <Divider sx={{ margin: "50px 0px 20px" }} />
         <Cities />
       </Box>

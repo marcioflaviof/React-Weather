@@ -138,11 +138,11 @@ function DetailsCard({ sx }) {
       </Box>
       <Box
         sx={{
-          margin: "20px 40px 20px",
+          margin: "10px 23px 10px",
           background: "#F98E01",
           opacity: "70%",
           height: "2px",
-          width: "80%",
+          width: "90%",
         }}
       />
       <Box>

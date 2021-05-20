@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="css-copng3"
+>
+  <span
+    className="css-vurnku"
+  >
+    Capitais
+  </span>
+  <div
+    className="css-1ksewea"
+  >
+    <div
+      className="css-vurnku"
+    >
+      <span
+        className="css-1ij4mp1"
+      >
+        Min
+      </span>
+      <span
+        className="css-1ij4mp1"
+      >
+        Máx
+      </span>
+    </div>
+    <div
+      className="css-18bjykf"
+    >
+      <span
+        className="css-1ij4mp1"
+      >
+        Min
+      </span>
+      <span
+        className="css-1ij4mp1"
+      >
+        Máx
+      </span>
+    </div>
+  </div>
+  <div
+    className="css-124fqsq"
+  >
+    Loading
+  </div>
+</div>
+`;

@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Cities from "../Cities/Cities";
+import Cities from "../Cities";
 
 it("renders correctly", () => {
   const cities = renderer.create(<Cities />).toJSON();

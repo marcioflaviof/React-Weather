@@ -1,58 +1,29 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
-const city = {
-  name: "Niterói",
-  state: "RJ",
-  country: "Brasil",
-  temp: "20ºC",
-  weather: "Nublado",
-  min_temp: "16º",
-  max_temp: "25º",
-  sensation: "19ºC",
-  wind: "18km/h",
-  humidity: "89%",
-  weekDays: {
-    dayOne: {
-      name: "Terça",
-      min: "18º",
-      max: "26º",
-    },
-    dayTwo: {
-      name: "Quarta",
-      min: "18º",
-      max: "28º",
-    },
-    dayThree: {
-      name: "Quinta",
-      min: "19º",
-      max: "30º",
-    },
-    dayFour: {
-      name: "Sexta",
-      min: "23º",
-      max: "35º",
-    },
-    dayFive: {
-      name: "Sábado",
-      min: "23º",
-      max: "37º",
-    },
-  },
+const params = {
+  city: "Curitiba",
+  country: "BR",
+  key: process.env.REACT_APP_API_KEY,
 };
 
 function useCity() {
-  const [details, setDetails] = useState(null);
+  const [city, setCity] = useState(null);
 
   useEffect(() => {
-    //TODO fetch with yahoo
     const fetchData = () => {
-      setDetails(city);
+      axios
+        .get("http://api.weatherbit.io/v2.0/current", { params })
+        .then((res) => {
+          const apiResponse = res.data;
+          setCity(apiResponse);
+        });
     };
 
     fetchData();
-  });
+  }, []);
 
-  return [details];
+  return [city];
 }
 
 export default useCity;

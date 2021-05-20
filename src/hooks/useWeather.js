@@ -17,13 +17,12 @@ function useWeather() {
   const [cities, setCities] = useState(null);
 
   useEffect(() => {
-    //TODO fetch with yahoo
     const fetchData = () => {
       setCities(citiesObject);
     };
 
     fetchData();
-  });
+  }, []);
 
   return [cities];
 }

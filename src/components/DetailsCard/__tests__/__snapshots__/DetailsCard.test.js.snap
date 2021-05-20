@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="css-lg8ucf"
+>
+  <div
+    className="css-ai50z5"
+  >
+    <span
+      className="css-1p4nx4e"
+    >
+      Niterói
+      , 
+      RJ
+       - 
+      Brasil
+    </span>
+    <div
+      className="css-6le2lh"
+    >
+      <span
+        className="css-vurnku"
+      >
+        20ºC
+         
+        Nublado
+      </span>
+    </div>
+    <div
+      className="css-qqqbm1"
+    >
+      <svg
+        color="orange"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": "orange",
+          }
+        }
+        viewBox="0 0 16 16"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M4.646 9.646a.5.5 0 01.708 0L8 12.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z"
+          fillRule="evenodd"
+        />
+        <path
+          clipRule="evenodd"
+          d="M8 2.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V3a.5.5 0 01.5-.5z"
+          fillRule="evenodd"
+        />
+      </svg>
+      <span
+        className="css-vurnku"
+      >
+        16º
+      </span>
+      <svg
+        color="orange"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": "orange",
+          }
+        }
+        viewBox="0 0 16 16"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z"
+          fillRule="evenodd"
+        />
+        <path
+          clipRule="evenodd"
+          d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z"
+          fillRule="evenodd"
+        />
+      </svg>
+      <span
+        className="css-vurnku"
+      >
+        25º
+      </span>
+      <span
+        className="css-116xqyd"
+      >
+        Sensação
+      </span>
+      <span
+        className="css-vurnku"
+      >
+        19ºC
+      </span>
+    </div>
+    <div
+      className="css-so1jmj"
+    >
+      <span
+        className="css-vurnku"
+      >
+        Vento
+      </span>
+      <span
+        className="css-9ewue0"
+      >
+        18km/h
+      </span>
+      <span
+        className="css-1l3oubh"
+      >
+        Umidade
+      </span>
+      <span
+        className="css-vurnku"
+      >
+        89%
+      </span>
+    </div>
+    <div
+      className="css-1ujbi4u"
+    />
+    <div
+      className="css-vurnku"
+    >
+      <span
+        className="css-vurnku"
+      >
+        Terça
+      </span>
+      <span
+        className="css-ltqn8"
+      >
+        Quarta
+      </span>
+      <span
+        className="css-ltqn8"
+      >
+        Quinta
+      </span>
+      <span
+        className="css-ltqn8"
+      >
+        Sexta
+      </span>
+      <span
+        className="css-ltqn8"
+      >
+        Sábado
+      </span>
+    </div>
+    <div
+      className="css-vurnku"
+    >
+      <span
+        className="css-1hjz83m"
+      >
+        18º
+         
+        26º
+      </span>
+      <span
+        className="css-8d9naf"
+      >
+        18º
+         
+        28º
+      </span>
+      <span
+        className="css-8d9naf"
+      >
+        19º
+         
+        30º
+      </span>
+      <span
+        className="css-8d9naf"
+      >
+        23º
+         
+        35º
+      </span>
+      <span
+        className="css-8d9naf"
+      >
+        23º
+         
+        37º
+      </span>
+    </div>
+  </div>
+</div>
+`;

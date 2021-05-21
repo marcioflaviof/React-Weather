@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { cityPresenter } from "../presenters/CityPresenter";
+import { cityPresenterDetails } from "../presenters/CityPresenterDetails";
 
 const params = {
   city: "Rio de Janeiro",
@@ -14,10 +14,10 @@ function useCity() {
   useEffect(() => {
     const fetchData = async () => {
       await axios
-        .get(process.env.REACT_APP_API_QUERY, { params })
+        .get(process.env.REACT_APP_WEATHERBIT_API, { params })
         .then((res) => {
           const apiResponse = res.data;
-          setCity(cityPresenter(apiResponse));
+          setCity(cityPresenterDetails(apiResponse));
         });
     };
 

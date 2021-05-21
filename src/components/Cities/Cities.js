@@ -23,6 +23,8 @@ const sx = {
 function Cities() {
   const [cities] = useWeather();
 
+  console.log(cities);
+
   return (
     <Box
       sx={{
@@ -55,14 +57,11 @@ function Cities() {
         </Box>
       </Box>
       <Box sx={sx.column}>
-        {cities
+        {cities.length === 10
           ? cities.map((city, index) => (
               <Box key={index}>
                 <Text variant="small" sx={sx.span.city}>
-                  {city.min}
-                </Text>
-                <Text variant="small" sx={sx.span.city}>
-                  {city.max}
+                  {city.temperature}
                 </Text>
                 <Text variant="small" sx={sx.span.city}>
                   {city.name}

@@ -1,9 +1,9 @@
 import { Box, Text } from "@theme-ui/components";
 import Divider from "../Divider/Divider";
-import useCityPresenter from "../../presenters/CityPresenter";
+import useCity from "../../hooks/useCity";
 
 function DetailsCard({ sx }) {
-  const [city] = useCityPresenter();
+  const [city] = useCity();
 
   return (
     <Box
@@ -22,7 +22,7 @@ function DetailsCard({ sx }) {
           <Box
             sx={{
               paddingTop: "20px",
-              fontSize: "6",
+              fontSize: "4",
             }}
           >
             <Text variant="bold">
@@ -31,12 +31,13 @@ function DetailsCard({ sx }) {
           </Box>
           <Box
             sx={{
-              marginLeft: "-5px",
               padding: "10px 0px",
             }}
           >
-            <Text sx={{ padding: "0px 5px 0px 48px" }}>Sensação</Text>
-            <Text variant="bold">{city.feelsLike}</Text>
+            <Text>Sensação</Text>
+            <Text variant="bold" sx={{ paddingLeft: "8px" }}>
+              {city.feelsLike}
+            </Text>
           </Box>
           <Box
             sx={{

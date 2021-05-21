@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { cityPresenter } from "../presenters/CityPresenter";
 
 const params = {
-  city: "Curitiba",
+  city: "Rio de Janeiro",
   country: "BR",
   key: process.env.REACT_APP_API_KEY,
 };
@@ -11,12 +12,12 @@ function useCity() {
   const [city, setCity] = useState(null);
 
   useEffect(() => {
-    const fetchData = () => {
-      axios
-        .get("http://api.weatherbit.io/v2.0/current", { params })
+    const fetchData = async () => {
+      await axios
+        .get(process.env.REACT_APP_API_QUERY, { params })
         .then((res) => {
           const apiResponse = res.data;
-          setCity(apiResponse);
+          setCity(cityPresenter(apiResponse));
         });
     };
 

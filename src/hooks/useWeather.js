@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const citiesObject = [
   { name: "Rio de Janeiro", min: "17º", max: "23º" },
@@ -13,12 +14,32 @@ const citiesObject = [
   { name: "João Pessoa", min: "28º", max: "40º" },
 ];
 
+const params = [
+  { city: "Rio de Janeiro", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Sao Paulo", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Belo Horizonte", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Brasilia", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Belem", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Salvador", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Curitiba", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Fortaleza", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Manaus", country: "BR", key: process.env.REACT_APP_API_KEY },
+  { city: "Joao Pessoa", country: "BR", key: process.env.REACT_APP_API_KEY },
+];
+
 function useWeather() {
   const [cities, setCities] = useState(null);
 
   useEffect(() => {
     const fetchData = () => {
-      setCities(citiesObject);
+      params.forEach(async (city) => {
+        await axios
+          .get("http://api.weatherbit.io/v2.0/current", { city })
+          .then((res) => {
+            const apiResponse = res.data;
+            setCities((cities) => [...cities, apiResponse]);
+          });
+      });
     };
 
     fetchData();

@@ -3,16 +3,16 @@ import renderer from "react-test-renderer";
 import Cities from "../Cities";
 
 const weather = [
-  { name: "Rio de Janeiro", min: "17º", max: "23º" },
-  { name: "São Paulo", min: "14º", max: "22º" },
-  { name: "Belo Horizonte", min: "21º", max: "32º" },
-  { name: "Brasília", min: "24º", max: "37º" },
-  { name: "Belém", min: "24º", max: "37º" },
-  { name: "Salvador", min: "23º", max: "37º" },
-  { name: "Curitiba", min: "5º", max: "14º" },
-  { name: "Fortaleza", min: "21º", max: "32º" },
-  { name: "Manaus", min: "24º", max: "37º" },
-  { name: "João Pessoa", min: "28º", max: "40º" },
+  { name: "Rio de Janeiro", temperature: "35ºC" },
+  { name: "São Paulo", temperature: "25ºC" },
+  { name: "Belo Horizonte", temperature: "15ºC" },
+  { name: "Brasília", temperature: "30ºC" },
+  { name: "Belém", temperature: "35ºC" },
+  { name: "Salvador", temperature: "33ºC" },
+  { name: "Curitiba", temperature: "10ºC" },
+  { name: "Fortaleza", temperature: "27ºC" },
+  { name: "Manaus", temperature: "33ºC" },
+  { name: "João Pessoa", temperature: "30ºC" },
 ];
 
 jest.mock("../../../hooks/useWeather", () => {

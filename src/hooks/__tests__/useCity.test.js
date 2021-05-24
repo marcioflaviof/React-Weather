@@ -1,49 +1,47 @@
+import mockedAxios from "axios";
 import useCity from "../useCity";
 import { renderHook } from "@testing-library/react-hooks";
 
 describe("useCity", () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
   describe("#run", () => {
-    it("get city details", () => {
-      const { result } = renderHook(useCity);
-
-      expect(result.current[0]).toStrictEqual({
-        name: "Niterói",
-        state: "RJ",
-        country: "Brasil",
-        temp: "20ºC",
-        weather: "Nublado",
-        min_temp: "16º",
-        max_temp: "25º",
-        sensation: "19ºC",
-        wind: "18km/h",
-        humidity: "89%",
-        weekDays: {
-          dayOne: {
-            name: "Terça",
-            min: "18º",
-            max: "26º",
-          },
-          dayTwo: {
-            name: "Quarta",
-            min: "18º",
-            max: "28º",
-          },
-          dayThree: {
-            name: "Quinta",
-            min: "19º",
-            max: "30º",
-          },
-          dayFour: {
-            name: "Sexta",
-            min: "23º",
-            max: "35º",
-          },
-          dayFive: {
-            name: "Sábado",
-            min: "23º",
-            max: "37º",
-          },
+    it("get city details", async () => {
+      const data = {
+        data: {
+          data: [
+            {
+              city_name: "Curitiba",
+              country_code: "BR",
+              temp: 10,
+              weather: {
+                description: "Nublado",
+              },
+              app_temp: 10.5,
+              wind_spd: 5.8,
+              rh: 85.2,
+            },
+          ],
         },
+      };
+
+      await mockedAxios.get.mockResolvedValueOnce(data);
+
+      const { result, waitForNextUpdate } = renderHook(() => useCity());
+
+      expect(result.current[0]).toStrictEqual(null);
+
+      await waitForNextUpdate();
+
+      expect(await result.current[0]).toStrictEqual({
+        country: "BR",
+        feelsLike: "11ºC",
+        humidity: "85%",
+        name: "Curitiba",
+        temperature: "10ºC",
+        weather: "Nublado",
+        wind: "21km/h",
       });
     });
   });

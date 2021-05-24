@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { cityPresenterDetails } from "../presenters/CityPresenterDetails";
 
 const params = {
-  city: "Rio de Janeiro",
+  city: "Curitiba",
   country: "BR",
-  key: process.env.REACT_APP_API_KEY,
 };
 
 function useCity() {
@@ -16,9 +15,10 @@ function useCity() {
       await axios
         .get(process.env.REACT_APP_WEATHERBIT_API, { params })
         .then((res) => {
-          const apiResponse = res.data;
-          setCity(cityPresenterDetails(apiResponse));
-        });
+          const apiResponse = cityPresenterDetails(res.data);
+          setCity(apiResponse);
+        })
+        .catch((error) => console.log(error));
     };
 
     fetchData();

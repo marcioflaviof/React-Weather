@@ -15,7 +15,7 @@ function useCity() {
       await axios
         .get(process.env.REACT_APP_WEATHERBIT_API, { params })
         .then((res) => {
-          const apiResponse = cityPresenterDetails(res.data);
+          const apiResponse = cityPresenterDetails(res.data.data[0]);
           setCity(apiResponse);
         })
         .catch((error) => console.log(error));

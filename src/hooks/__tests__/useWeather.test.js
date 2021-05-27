@@ -1,27 +1,46 @@
-import mockedAxios from "axios";
+import axios from "axios";
+import httpAdapter from "axios/lib/adapters/http";
+import nock from "nock";
 import useWeather from "../useWeather";
 import { renderHook } from "@testing-library/react-hooks";
 
+axios.defaults.adapter = httpAdapter;
+
 describe("useWeather", () => {
-  afterAll(() => {
-    jest.clearAllMocks();
-  });
+  const cities = [
+    { city: "Rio de Janeiro", country: "BR" },
+    { city: "Sao Paulo", country: "BR" },
+  ];
+
   describe("#run", () => {
+    const weatherMock = nock("http://api.weatherbit.io");
+
+    const params = {
+      key: process.env.WEATHERBIT_KEY,
+      country: "BR",
+    };
+
+    beforeEach(() => {
+      [
+        { city_name: "Rio de Janeiro", temp: 40 },
+        { city_name: "Sao Paulo", temp: 15 },
+      ].forEach((city) => {
+        weatherMock
+          .persist()
+          .get("/v2.0/current")
+          .query({ ...params, city: city.city_name })
+          .reply(200, { data: [city] });
+      });
+    });
+
+    afterEach(() => {
+      weatherMock.done();
+    });
+
     it("get all cities", async () => {
-      const data = {
-        data: {
-          data: [
-            {
-              city_name: "Curitiba",
-              temp: 10,
-            },
-          ],
-        },
-      };
-
-      await mockedAxios.get.mockResolvedValue(data);
-
-      const { result, waitForNextUpdate } = renderHook(() => useWeather());
+      const { result, waitForNextUpdate } = renderHook(() =>
+        useWeather(cities)
+      );
 
       expect(result.current[0]).toStrictEqual([]);
 
@@ -29,16 +48,8 @@ describe("useWeather", () => {
 
       expect(typeof result.current[0]).toBe("object");
       expect(result.current[0]).toStrictEqual([
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
-        { name: "Curitiba", temperature: "10ºC" },
+        { name: "Rio de Janeiro", temperature: "40ºC" },
+        { name: "Sao Paulo", temperature: "15ºC" },
       ]);
     });
   });

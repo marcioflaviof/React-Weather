@@ -20,8 +20,21 @@ const sx = {
   },
 };
 
+const params = [
+  { city: "Rio de Janeiro", country: "BR" },
+  { city: "Sao Paulo", country: "BR" },
+  { city: "Belo Horizonte", country: "BR" },
+  { city: "Brasilia", country: "BR" },
+  { city: "Porto Alegre", country: "BR" },
+  { city: "Salvador", country: "BR" },
+  { city: "Curitiba", country: "BR" },
+  { city: "Fortaleza", country: "BR" },
+  { city: "Manaus", country: "BR" },
+  { city: "Joao Pessoa", country: "BR" },
+];
+
 function Cities() {
-  const [cities] = useWeather();
+  const [cities] = useWeather(params);
 
   return (
     <Box

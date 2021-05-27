@@ -1,29 +1,25 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
+import { cityPresenter } from "../presenters/CityPresenter";
 
-const citiesObject = [
-  { name: "Rio de Janeiro", min: "17º", max: "23º" },
-  { name: "São Paulo", min: "14º", max: "22º" },
-  { name: "Belo Horizonte", min: "21º", max: "32º" },
-  { name: "Brasília", min: "24º", max: "37º" },
-  { name: "Belém", min: "24º", max: "37º" },
-  { name: "Salvador", min: "23º", max: "37º" },
-  { name: "Curitiba", min: "5º", max: "14º" },
-  { name: "Fortaleza", min: "21º", max: "32º" },
-  { name: "Manaus", min: "24º", max: "37º" },
-  { name: "João Pessoa", min: "28º", max: "40º" },
-];
-
-function useWeather() {
-  const [cities, setCities] = useState(null);
+function useWeather(params) {
+  const [cities, setCities] = useState([]);
 
   useEffect(() => {
-    //TODO fetch with yahoo
-    const fetchData = () => {
-      setCities(citiesObject);
+    const fetchData = async () => {
+      const result = await Promise.all(
+        params.map(async (city) => {
+          return axios
+            .get(process.env.REACT_APP_WEATHERBIT_API, { params: city })
+            .then(({ data }) => data.data[0]);
+        })
+      );
+
+      setCities(result.map(cityPresenter));
     };
 
     fetchData();
-  });
+  }, [params]);
 
   return [cities];
 }

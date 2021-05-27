@@ -20,8 +20,21 @@ const sx = {
   },
 };
 
+const params = [
+  { city: "Rio de Janeiro", country: "BR" },
+  { city: "Sao Paulo", country: "BR" },
+  { city: "Belo Horizonte", country: "BR" },
+  { city: "Brasilia", country: "BR" },
+  { city: "Porto Alegre", country: "BR" },
+  { city: "Salvador", country: "BR" },
+  { city: "Curitiba", country: "BR" },
+  { city: "Fortaleza", country: "BR" },
+  { city: "Manaus", country: "BR" },
+  { city: "Joao Pessoa", country: "BR" },
+];
+
 function Cities() {
-  const [cities] = useWeather();
+  const [cities] = useWeather(params);
 
   return (
     <Box
@@ -35,10 +48,7 @@ function Cities() {
       <Box sx={{ ...sx.column, m: "10px 0" }}>
         <Box>
           <Text variant="small" sx={sx.span.title}>
-            Min
-          </Text>
-          <Text variant="small" sx={sx.span.title}>
-            Máx
+            Temp
           </Text>
         </Box>
         <Box
@@ -47,22 +57,16 @@ function Cities() {
           }}
         >
           <Text variant="small" sx={sx.span.title}>
-            Min
-          </Text>
-          <Text variant="small" sx={sx.span.title}>
-            Máx
+            Temp
           </Text>
         </Box>
       </Box>
       <Box sx={sx.column}>
-        {cities
+        {cities.length === 10
           ? cities.map((city, index) => (
               <Box key={index}>
                 <Text variant="small" sx={sx.span.city}>
-                  {city.min}
-                </Text>
-                <Text variant="small" sx={sx.span.city}>
-                  {city.max}
+                  {city.temperature}
                 </Text>
                 <Text variant="small" sx={sx.span.city}>
                   {city.name}

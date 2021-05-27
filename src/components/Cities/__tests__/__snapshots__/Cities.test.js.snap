@@ -18,12 +18,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1ij4mp1"
       >
-        Min
-      </span>
-      <span
-        className="css-1ij4mp1"
-      >
-        Máx
+        Temp
       </span>
     </div>
     <div
@@ -32,12 +27,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1ij4mp1"
       >
-        Min
-      </span>
-      <span
-        className="css-1ij4mp1"
-      >
-        Máx
+        Temp
       </span>
     </div>
   </div>
@@ -50,12 +40,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        17º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        23º
+        35ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -69,12 +54,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        14º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        22º
+        25ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -88,12 +68,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        21º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        32º
+        15ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -107,12 +82,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        24º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        37º
+        30ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -126,12 +96,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        24º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        37º
+        35ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -145,12 +110,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        23º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        37º
+        33ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -164,12 +124,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        5º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        14º
+        10ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -183,12 +138,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        21º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        32º
+        27ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -202,12 +152,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        24º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        37º
+        33ºC
       </span>
       <span
         className="css-1mbp25s"
@@ -221,12 +166,7 @@ exports[`renders correctly 1`] = `
       <span
         className="css-1mbp25s"
       >
-        28º
-      </span>
-      <span
-        className="css-1mbp25s"
-      >
-        40º
+        30ºC
       </span>
       <span
         className="css-1mbp25s"

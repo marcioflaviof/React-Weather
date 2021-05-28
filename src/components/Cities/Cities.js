@@ -62,18 +62,20 @@ function Cities() {
         </Box>
       </Box>
       <Box sx={sx.column}>
-        {cities.length === 10
-          ? cities.map((city, index) => (
-              <Box key={index}>
-                <Text variant="small" sx={sx.span.city}>
-                  {city.temperature}
-                </Text>
-                <Text variant="small" sx={sx.span.city}>
-                  {city.name}
-                </Text>
-              </Box>
-            ))
-          : "Loading"}
+        {cities.length === 10 ? (
+          cities.map((city, index) => (
+            <Box key={index}>
+              <Text variant="small" sx={sx.span.city}>
+                {city.temperature}
+              </Text>
+              <Text variant="small" sx={sx.span.city}>
+                {city.name}
+              </Text>
+            </Box>
+          ))
+        ) : (
+          <Text sx={{ fontSize: "3" }}>Data not found</Text>
+        )}
       </Box>
     </Box>
   );

@@ -1,9 +1,10 @@
 import { Box, Text } from "@theme-ui/components";
+import { FiAlertTriangle } from "react-icons/fi";
+import { useWeatherContext } from "../../providers/weather/Context";
 import Divider from "../Divider/Divider";
-import useCity from "../../hooks/useCity";
 
 function DetailsCard({ sx }) {
-  const [city] = useCity();
+  const { city } = useWeatherContext();
 
   return (
     <Box
@@ -60,7 +61,23 @@ function DetailsCard({ sx }) {
           />
         </Box>
       ) : (
-        "Loading"
+        <Box
+          sx={{
+            margin: "49px 123px",
+            verticalAlign: "top",
+            display: "inline-block",
+            textAlign: "center",
+            width: "204px",
+          }}
+        >
+          <Text
+            sx={{ display: "block", paddingBottom: "10px", fontSize: "4" }}
+            variant="bold"
+          >
+            Data not found
+          </Text>
+          <FiAlertTriangle size="10em" />
+        </Box>
       )}
     </Box>
   );

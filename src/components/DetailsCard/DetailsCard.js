@@ -63,7 +63,7 @@ function DetailsCard({ sx }) {
       ) : (
         <Box
           sx={{
-            margin: "49px 123px",
+            margin: "31px 123px",
             verticalAlign: "top",
             display: "inline-block",
             textAlign: "center",
@@ -75,13 +75,13 @@ function DetailsCard({ sx }) {
               display: "block",
               paddingBottom: "10px",
               fontSize: "4",
-              color: "#414141",
+              color: "alert",
             }}
             variant="bold"
           >
-            Data not found
+            Dados inacessiveis
           </Text>
-          <FiAlertTriangle color="#414141" size="10em" />
+          <FiAlertTriangle color="alert" size="10em" />
         </Box>
       )}
     </Box>

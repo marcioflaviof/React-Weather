@@ -74,7 +74,7 @@ function Cities() {
             </Box>
           ))
         ) : (
-          <Text sx={{ fontSize: "3" }}>Data not found</Text>
+          <Text sx={{ fontSize: "3", color: "#414141" }}>Data not found</Text>
         )}
       </Box>
     </Box>

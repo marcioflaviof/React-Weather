@@ -71,12 +71,17 @@ function DetailsCard({ sx }) {
           }}
         >
           <Text
-            sx={{ display: "block", paddingBottom: "10px", fontSize: "4" }}
+            sx={{
+              display: "block",
+              paddingBottom: "10px",
+              fontSize: "4",
+              color: "#414141",
+            }}
             variant="bold"
           >
             Data not found
           </Text>
-          <FiAlertTriangle size="10em" />
+          <FiAlertTriangle color="#414141" size="10em" />
         </Box>
       )}
     </Box>

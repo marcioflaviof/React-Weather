@@ -8,6 +8,7 @@ const themes = {
 
   colors: {
     orange: "#F98E01",
+    alert: "#414141",
   },
   forms: {
     input: {

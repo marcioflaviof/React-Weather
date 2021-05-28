@@ -2,12 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { cityPresenterDetails } from "../presenters/CityPresenterDetails";
 
-const params = {
-  city: "Curitiba",
-  country: "BR",
-};
-
-function useCity() {
+function useCity(params) {
   const [city, setCity] = useState(null);
 
   useEffect(() => {
@@ -22,7 +17,7 @@ function useCity() {
     };
 
     fetchData();
-  }, []);
+  }, [params]);
 
   return [city];
 }

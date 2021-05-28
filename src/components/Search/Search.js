@@ -1,7 +1,19 @@
-import { Box, Input } from "theme-ui";
+import { Box, Button, Input } from "theme-ui";
 import { GrSearch } from "react-icons/gr";
+import React, { useState } from "react";
+import { useWeatherContext } from "../../providers/weather/Context";
 
 function Search({ sx }) {
+  const [city, setCity] = useState();
+
+  const { setParams } = useWeatherContext();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setParams({ city });
+  };
+
   return (
     <Box
       sx={{
@@ -10,17 +22,23 @@ function Search({ sx }) {
         marginTop: "50px",
       }}
     >
-      <Box>
-        <Box
+      <Box as="form" onSubmit={handleSubmit}>
+        <Button
           sx={{
             position: "absolute",
-            marginLeft: ["260px", "405px"],
-            marginTop: ["12px", "23px"],
+            marginLeft: ["250px", "375px"],
+            marginTop: ["7px", "18px"],
+            padding: ["5px", null],
+            backgroundColor: "white",
+            cursor: "pointer",
           }}
         >
           <GrSearch size={"1.5em"} />
-        </Box>
+        </Button>
         <Input
+          type="text"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
           sx={{
             borderColor: "orange",
             padding: ["15px", "20px"],

@@ -16,6 +16,6 @@ This project uses react test library as the main test framework, to run make:
 
 ## Running
 
-Create a .env following .env.example
+Create a .env following .env.example <br />
 ``yarn``<br/>
 ``yarn start``

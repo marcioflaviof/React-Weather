@@ -5,65 +5,46 @@ exports[`renders correctly 1`] = `
   className="css-lg8ucf"
 >
   <div
-    className="css-ai50z5"
+    className="css-w50vuv"
   >
     <span
-      className="css-1p4nx4e"
+      className="css-1cq1ivs"
     >
-      Niterói
-       - 
-      Brasil
+      Dados inacessiveis
     </span>
-    <div
-      className="css-co946m"
+    <svg
+      color="alert"
+      fill="none"
+      height="10em"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": "alert",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="10em"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <span
-        className="css-vurnku"
-      >
-        20ºC
-         
-        Nublado
-      </span>
-    </div>
-    <div
-      className="css-so1jmj"
-    >
-      <span
-        className="css-vurnku"
-      >
-        Sensação
-      </span>
-      <span
-        className="css-1k3micg"
+      <path
+        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
       />
-    </div>
-    <div
-      className="css-so1jmj"
-    >
-      <span
-        className="css-vurnku"
-      >
-        Vento
-      </span>
-      <span
-        className="css-9ewue0"
-      >
-        18km/h
-      </span>
-      <span
-        className="css-1l3oubh"
-      >
-        Umidade
-      </span>
-      <span
-        className="css-vurnku"
-      >
-        89%
-      </span>
-    </div>
-    <div
-      className="css-1ujbi4u"
-    />
+      <line
+        x1="12"
+        x2="12"
+        y1="9"
+        y2="13"
+      />
+      <line
+        x1="12"
+        x2="12.01"
+        y1="17"
+        y2="17"
+      />
+    </svg>
   </div>
 </div>
 `;

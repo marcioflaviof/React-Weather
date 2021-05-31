@@ -37,11 +37,13 @@ describe("useCity", () => {
     });
 
     afterEach(() => {
-      weatherMock.done();
+      nock.cleanAll();
     });
 
     it("get city details", async () => {
-      const { result, waitForNextUpdate } = renderHook(() => useCity());
+      const { result, waitForNextUpdate } = renderHook(() =>
+        useCity({ city: params.city, country: params.country })
+      );
 
       expect(result.current[0]).toStrictEqual(null);
 

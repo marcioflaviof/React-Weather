@@ -4,11 +4,12 @@ exports[`renders correctly 1`] = `
 <div
   className="css-8ynpi3"
 >
-  <div
+  <form
     className="css-vurnku"
+    onSubmit={[Function]}
   >
-    <div
-      className="css-1bol0ik"
+    <button
+      className="css-1qbq70"
     >
       <svg
         fill="currentColor"
@@ -31,11 +32,13 @@ exports[`renders correctly 1`] = `
           strokeWidth="2"
         />
       </svg>
-    </div>
+    </button>
     <input
       className="css-ynicpm"
+      onChange={[Function]}
       placeholder="Insira aqui o nome da cidade"
+      type="text"
     />
-  </div>
+  </form>
 </div>
 `;

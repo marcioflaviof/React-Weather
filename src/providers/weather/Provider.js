@@ -1,4 +1,5 @@
 import { WeatherContext } from "./Context";
+import React from "react";
 import useCity from "../../hooks/useCity";
 import { useState } from "react";
 

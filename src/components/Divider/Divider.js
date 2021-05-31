@@ -1,5 +1,7 @@
 import { Box } from "@theme-ui/components";
+import React from "react";
 function Divider({ sx }) {
+
   return (
     <Box
       sx={{

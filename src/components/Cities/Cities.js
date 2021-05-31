@@ -1,4 +1,5 @@
 import { Box, Text } from "@theme-ui/components";
+import React from "react";
 import useWeather from "../../hooks/useWeather";
 
 const sx = {

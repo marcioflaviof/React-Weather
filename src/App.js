@@ -1,4 +1,5 @@
 import { ThemeProvider, Text, Box } from "theme-ui";
+import React from "react";
 import theme from "./theme/theme";
 import Divider from "./components/Divider/Divider";
 import Search from "./components/Search/Search";

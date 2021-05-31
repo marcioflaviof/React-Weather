@@ -1,6 +1,7 @@
 import { Box, Text } from "@theme-ui/components";
 import { FiAlertTriangle } from "react-icons/fi";
 import { useWeatherContext } from "../../providers/weather/Context";
+import React from "react";
 import Divider from "../Divider/Divider";
 
 function DetailsCard({ sx }) {

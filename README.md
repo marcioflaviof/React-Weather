@@ -8,7 +8,7 @@ This project is a challenge made by https://github.com/1STi/desafio-frontend/
 ``Node v15.12.0``<br />
 ``Yarn 1.22.10`` <br />
 
-
+##Testing [![Build Status](https://marcioflaviof.semaphoreci.com/badges/react-weather/branches/master.svg?style=shields)](https://marcioflaviof.semaphoreci.com/projects/react-weather)
 
 This project uses react test library as the main test framework, to run make:
 

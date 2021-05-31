@@ -1,17 +1,22 @@
-import axios from "axios";
-import nock from "nock";
-import httpAdapter from "axios/lib/adapters/http";
 import { renderHook } from "@testing-library/react-hooks";
+import axios from "axios";
+import httpAdapter from "axios/lib/adapters/http";
+import nock from "nock";
 import useCity from "../useCity";
 
 axios.defaults.adapter = httpAdapter;
 
 describe("useCity", () => {
+  beforeAll(() => {
+    process.env.REACT_APP_WEATHERBIT_API =
+      "http://api.weatherbit.io/v2.0/current?key=my-key";
+  });
+
   describe("#run", () => {
     const weatherMock = nock("http://api.weatherbit.io");
 
     const params = {
-      key: process.env.WEATHERBIT_KEY,
+      key: "my-key",
       city: "Curitiba",
       country: "BR",
     };

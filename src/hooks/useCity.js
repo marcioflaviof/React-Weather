@@ -22,7 +22,9 @@ function useCity(params) {
 
     fetchData();
 
-    return () => { isMount = false }
+    return () => {
+      isMount = false;
+    };
   }, [params]);
 
   return [city];

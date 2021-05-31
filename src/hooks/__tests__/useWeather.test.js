@@ -7,6 +7,11 @@ import { renderHook } from "@testing-library/react-hooks";
 axios.defaults.adapter = httpAdapter;
 
 describe("useWeather", () => {
+  beforeEach(() => {
+    process.env.REACT_APP_WEATHERBIT_API =
+      "http://api.weatherbit.io/v2.0/current?key=my-key";
+  });
+
   const cities = [
     { city: "Rio de Janeiro", country: "BR" },
     { city: "Sao Paulo", country: "BR" },
@@ -16,7 +21,7 @@ describe("useWeather", () => {
     const weatherMock = nock("http://api.weatherbit.io");
 
     const params = {
-      key: process.env.WEATHERBIT_KEY,
+      key: "my-key",
       country: "BR",
     };
 
